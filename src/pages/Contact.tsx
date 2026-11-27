@@ -199,12 +199,12 @@ export default function Contact() {
               {COMPANY.phone != '' &&
               <div className="contact-item">
                 <span className="contact-item__k">Phone</span>
-                <a className="contact-item__v" href={`tel:${COMPANY.phone.replace(/\s/g, '')}`}>
+                <a className="contact-item__v" href={`tel:${COMPANY.phone}`}>
                   {COMPANY.phone}
                 </a>
               </div>
               }
-              {COMPANY.careers != '' &&
+              {COMPANY.address != '' &&
               <div className="contact-item">
                 <span className="contact-item__k">Studio</span>
                 <span className="contact-item__v">{COMPANY.address}</span>

@@ -47,9 +47,11 @@ export default function Footer() {
               <li>
                 <Link to="/work">Case studies</Link>
               </li>
+              {COMPANY.careers.length > 0 &&
               <li>
                 <a href={`mailto:${COMPANY.careers}`}>Careers</a>
               </li>
+              }
               <li>
                 <Link to="/contact">Contact</Link>
               </li>

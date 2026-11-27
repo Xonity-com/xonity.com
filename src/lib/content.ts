@@ -6,10 +6,10 @@ export type IconCmp = ComponentType<{ size?: number; className?: string }>
 export const COMPANY = {
   name: 'Xonity',
   tagline: 'Digital engineering for the next decade',
+  careers: '',
+  phone: '',
+  address: '',
   email: 'hello@xonity.com',
-  careers: 'careers@xonity.com',
-  phone: '+420 234 567 890',
-  address: 'Karlín Hub, Prague, Czech Republic',
   founded: 2014,
 } as const
 

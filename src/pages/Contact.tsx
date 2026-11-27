@@ -104,7 +104,7 @@ export default function Contact() {
                     <label className="field__label" htmlFor="name">
                       Your name *
                     </label>
-                    <input id="name" name="name" placeholder="Jane Novák" autoComplete="name" />
+                    <input id="name" name="name" placeholder="Jane Webster" autoComplete="name" />
                     {errors.name ? <span className="field__error">{errors.name}</span> : null}
                   </div>
                   <div className={`field${errors.email ? ' field--error' : ''}`}>
@@ -183,27 +183,33 @@ export default function Contact() {
             </h2>
             <div className="stack">
               <div className="contact-item">
-                <span className="contact-item__k">New business</span>
+                <span className="contact-item__k">Contact</span>
                 <a className="contact-item__v" href={`mailto:${COMPANY.email}`}>
                   {COMPANY.email}
                 </a>
               </div>
+              {COMPANY.careers != '' &&
               <div className="contact-item">
                 <span className="contact-item__k">Careers</span>
                 <a className="contact-item__v" href={`mailto:${COMPANY.careers}`}>
                   {COMPANY.careers}
                 </a>
               </div>
+              }
+              {COMPANY.phone != '' &&
               <div className="contact-item">
                 <span className="contact-item__k">Phone</span>
                 <a className="contact-item__v" href={`tel:${COMPANY.phone.replace(/\s/g, '')}`}>
                   {COMPANY.phone}
                 </a>
               </div>
+              }
+              {COMPANY.careers != '' &&
               <div className="contact-item">
                 <span className="contact-item__k">Studio</span>
                 <span className="contact-item__v">{COMPANY.address}</span>
               </div>
+              }
               <div className="contact-item" style={{ borderBottom: 'none' }}>
                 <span className="contact-item__k">Response time</span>
                 <span className="contact-item__v">One working day, from an engineer</span>
